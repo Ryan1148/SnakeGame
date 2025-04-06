@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="csslibs/design.css">
+    <link rel="stylesheet" href="csslibs/cog.css">
+    <link rel="stylesheet" href="csslibs/responsive.css">
+    <title>Snake Game</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="game-msg">
+            <p class="msg">Press<span class="keys">WASD</span>Keys to start</p>
+        </div>
+        <div class="gameOverAlert">
+            <p class="gom">Oops, Game Over!</p>
+            <div class="overBtns">
+                <button class="btn sound playBtn">Play Again</button>
+                <button class="cancelBtn sound"><img src="icons/cross.svg" alt=""></button>
+            </div>
+        </div>
+        <div class="levelBox">
+            <h2 class="scoretag">Highest Scores</h2>
+            <div class="rect-wrapper">
+                <span class="rect rect1">
+                    <h2 class="lvltag">Easy</h2>
+                    <p class="lvlVal easyVal">0</p>
+                </span>
+                <span class="rect rect2">
+                    <h2 class="lvltag">Normal</h2>
+                    <p class="lvlVal normalVal">0</p>
+                </span>
+                <span class="rect rect3">
+                    <h2 class="lvltag">Hard</h2>
+                    <p class="lvlVal hardVal">0</p>
+                </span>
+                <span class="rect rect4">
+                    <h2 class="lvltag">Insane</h2>
+                    <p class="lvlVal insaneVal">0</p>
+                </span>
+            </div>
+        </div>
+        <div class="settings sound"><img src="icons/settings.svg" alt=""></div>
+        <div class="scoresBox">
+            <div class="scorebox score">
+                <h2 class="scoretag">Score</h2>
+                <p class="scoreval sval">00</p>
+            </div>
+            <div class="scorebox hiscore">
+                <h2 class="hiscoretag">Hiscore</h2>
+                <p class="hiscoreval sval">00</p>
+            </div>
+        </div>
+
+        <div class="game-box">
+            <div class="boardImg"><img src="" alt=""></div>
+            <div class="game-board"></div>
+            <div class="cog-panel">
+                <div class="game-logo" title="Game info"><img src="icons/gameicon.svg" alt=""></div>
+                <div class="game-options">
+                    <span class="option sound leveltag lvl" title="Levels">LVL</span>
+                    <span class="option sound clr" title="Foodcolor"><div class="box"></div></span>
+                    <span class="option sound snd" title="Sound"><img src="icons/active-sound.svg" alt=""></span>
+                    <span class="option sound music" title="Music"><img src="icons/inactive-music.svg" alt=""></span>
+                    <span class="option sound controls" title="Controls"><img src="icons/controls.svg" alt=""></span>
+                    <div class="options-panels">
+                        <div class="levels-panel">
+                            <div class="level-navbar panel-nav">
+                                <h2 class="level-tag panel-tag">Select Level</h2>
+                                <div class="back sound lvlBack"><img src="icons/cross.svg" alt=""></div>
+                            </div>
+                            <div class="levels">
+                                <span class="level easy">Easy</span>
+                                <span class="level selected normal">Normal</span>
+                                <span class="level hard">Hard</span>
+                                <span class="level insane">Insane</span>
+                            </div>
+                            <div class="level-data">
+                                <li class="data data1">Snake will move relatively slow.</li>
+                                <li class="data data2">Food will spawn in good location.</li>
+                                <li class="data data3">No Timebombs!</li>
+                                <li class="data data4">Background won't change.</li>
+                                <li class="alert"><img src="icons/alert.svg" alt="">You're progress wont't save if you
+                                    collide to a wall!</li>
+                            </div>
+                        </div>
+                        <div class="foodColor-panel">
+                            <div class="food-navbar panel-nav">
+                                <h2 class="food-tag panel-tag">Food Color</h2>
+                                <div class="back sound clrBack"><img src="icons/cross.svg" alt=""></div>
+                            </div>
+                            <div class="food-content">
+                                <input type="text" style="display: none;" id="bx">
+                                <div class="foodIcon"></div>
+
+                                <div class="foodcolor-options">
+                                    <div class="foodoption tapsnd active"></div>
+                                    <div class="foodoption tapsnd inactive selected"></div>
+                                    <div class="foodoption tapsnd alert"></div>
+                                    <div class="foodoption tapsnd intense"></div>
+                                    <div class="foodoption tapsnd primary"></div>
+                                </div>
+                            </div>
+                            <div class="food-btns">
+                                <button class="btn sound default">Default</button>
+                            </div>
+                        </div>
+                        <div class="control-panel">
+                            <div class="control-nav panel-nav">
+                                <h2 class="food-tag panel-tag">Controls</h2>
+                                <div class="back sound ctrlBack"><img src="icons/cross.svg" alt=""></div>
+                            </div>
+                            <div class="control-content">
+                                <div class="control-btns">
+                                    <button class="btn ctrls sound selected wasd">WASD Keys</button>
+                                    <button class="btn ctrls sound arrowkeys">Arrow Keys</button>
+                                </div>
+                                <div class="controlkeys-content">
+                                    <img src="keysImg/wasdkeys.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-scores">
+                    <div class="scorebox score">
+                        <h2 class="scoretag">Score</h2>
+                        <p class="scoreval sval">00</p>
+                    </div>
+                    <div class="scorebox hiscore">
+                        <h2 class="hiscoretag">Hiscore</h2>
+                        <p class="hiscoreval sval">00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+
+</html>

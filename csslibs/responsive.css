@@ -1,0 +1,152 @@
+@media (max-width:400px) {
+    body{
+        background-color: var(--black);
+        width: 100%;
+        height: 100%;
+    }
+    .game-msg{
+        display: none;
+    }
+    .game-scores{
+        display: none;
+    }
+    .game-box .cog-panel{
+        height: 310px;
+        width: 70px;
+        position: absolute;
+        z-index: 700;
+        border-radius: 40px;
+        padding: 15px;
+        right: -90px;
+        transition: 0.4s ease;
+    }
+    .game-box .cog-panel.enabled{
+        right: 10px;
+    }
+    .gameOverAlert.disabled{
+        display: none;
+        z-index: 0;
+    }
+    .game-board{
+        width: 350px;
+        height: 350px;
+        z-index: 500;
+    }
+    .boardImg{
+        width: 350px;
+        height: 350px;
+    }
+    .game-box{
+        gap: 0;
+        overflow: hidden;
+    }
+    .cog-panel .game-options .controls{
+        display: none;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .settings{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--de-black);
+        position: absolute;
+        z-index: 200;
+        top: 50px;
+        right: 20px;
+        padding: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.4s ease;
+    }
+    .settings img{
+        transition: 0.4s ease;
+    }
+    .settings:active{
+        transform: scale(0.95);
+        filter: brightness(0.8);
+    }
+    .scoresBox{
+        display: flex;
+        position: absolute;
+        z-index: 200;
+        top: 130px;
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .scoresBox .scorebox{
+        background: var(--de-black);
+        width: 45%;
+        border-radius: 15px;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .scoresBox .scorebox .scoretag,.hiscoretag{
+        font-size: 1.2em;
+        color: var(--grey);
+        font-weight: 400;
+    }
+    .scoresBox .scorebox .sval{
+        color: var(--white);
+        font-size: 2em;
+    }
+    .game-box .options-panels{
+        position: absolute;
+        transform: translateX(-50%);
+        left: -380%;
+        top: -70px;
+    }
+    .gameOverAlert.enabled{
+        transform: scale(0.8);
+        z-index: 800;
+        border: 2px solid #2e2e2e;
+    }
+    .game-box .options-panels .levels-panel{
+        z-index: 600;
+        transform: scale(0.7) translateY(-20px);
+        border: 2px solid var(--de-black);
+        display: none;
+    }
+    .options-panels .foodColor-panel{
+        transform: scale(0.7) translateY(40px)translateX(-20px);
+        border: 2px solid var(--de-black);
+    }
+    .foodColor-panel .food-btns .btn{
+        padding: 12px 95px;
+    }
+    .cog-panel .game-logo{
+        height: 40px;
+        border-radius: 40px;
+    }
+    .levelBox.enabled{
+        transform: scale(0.6);
+        z-index: 800;
+    }
+    .headBubble{
+        background-color: var(--grey);
+        border: 2px solid var(--de-black);
+        border-radius: 5px;
+    }
+    .foodBubble{
+        background-color: var(--danger);
+        border: 2px solid var(--de-black);
+        border-radius: 5px;
+    }
+    .snakeBubble.old{
+        background-color: var(--mid-grey);
+        border: 2px solid var(--de-black);
+        border-radius: 5px;
+    }
+    .snakeBubble.new{
+        background-color: var(--white);
+        border: 2px solid var(--de-black);
+        border-radius: 5px;
+    }
+}

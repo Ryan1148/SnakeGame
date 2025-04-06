@@ -1,0 +1,383 @@
+.game-box .cog-panel{
+    height: 600px;
+    width: 70px;
+    background: var(--de-black);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cog-panel .game-logo{
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.cog-panel .game-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-user-drag: none;
+    user-select: none;
+    pointer-events: none;
+}
+.cog-panel .game-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.cog-panel .game-options .option{
+    width: 40px;
+    height: 40px;
+    background-color: var(--mid-black);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.cog-panel .game-options .option:active{
+    transform: scale(0.95);
+    filter: brightness(0.8);
+}
+.game-options .option img{
+    width: 20px;
+}
+.game-scores{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.game-scores .scorebox{
+    background: var(--mid-black);
+    width: 100%;
+    height: 90px;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.game-scores .scorebox .scoretag{
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--grey);
+    border-bottom: 1px solid #2e2e2e;
+}
+.game-scores .scorebox .hiscoretag{
+    font-size: 0.7em;
+    font-weight: 400;
+    color: var(--grey);
+    border-bottom: 1px solid #2e2e2e;
+}
+.game-scores .scorebox .sval{
+    font-size: 1.7em;
+    font-weight: 500;
+    color: var(--white);
+}
+.game-options .leveltag{
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.game-options .box{
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+.game-box .options-panels{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 31%;
+    z-index: 110;
+}
+.game-box .options-panels .levels-panel{
+    position: absolute;
+    height: 480px;
+    border-radius: 15px;
+    width: 350px;
+    background: var(--black);
+    overflow: hidden;
+    display: none;
+    transition: 0.3s ease-out;
+}
+.options-panels .panel-nav{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--mid-black);
+}
+.options-panels .panel-tag{
+    font-size: 1.4em;
+    color: var(--light-white);
+    font-weight: 500;
+}
+.options-panels .back{
+    width: 35px;
+    height: 35px;
+    background: var(--mid-black);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.options-panels .back:active{
+    transform: scale(0.95);
+    filter: brightness(0.8);
+}
+.options-panels .back img{
+    width: 17px;
+}
+.levels-panel .levels{
+    width: 100%;
+    height: 200px;
+}
+.levels-panel .levels .easy{
+    color: var(--active);
+    filter: brightness(0.5);
+}
+.levels-panel .levels .normal{
+    color: var(--alert);
+    filter: brightness(0.5);
+}
+.levels-panel .levels .hard{
+    color: var(--danger);
+    filter: brightness(0.5);
+}
+.levels-panel .levels .insane{
+    color: var(--intense);
+    filter: brightness(0.5);
+}
+.levels-panel .levels .level{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.level.selected{
+    background-color: var(--de-black);
+}
+.level.selected .normal{
+    filter: brightness(1);
+}
+.levels-panel .levels .level:hover{
+    background-color: var(--de-black);
+}
+.levels-panel .level-data{
+    position: absolute;
+    width: 95%;
+    background: var(--de-black);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 210px;
+    bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+}
+.levels-panel .level-data .data{
+    color: var(--grey);
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.levels-panel .level-data .alert{
+    color: var(--white);
+    font-size: 1em;
+    font-weight: 300;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: 0.4s ease;
+}
+.level-data .alert img{
+    margin-top: 4px;
+    width: 23px;
+}
+.options-panels .foodColor-panel{
+    width: 310px;
+    height: 380px;
+    background: var(--black);
+    position: absolute;
+    border-radius: 15px;
+    overflow: hidden;
+    display: none;
+    z-index: 0;
+    transition: 0.3s ease-out;
+}
+.options-panels .foodColor-panel .food-content{
+    display: flex;
+    width: 100%;
+    height: 230px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.foodColor-panel .food-content .foodIcon{
+    width: 100px;
+    height: 100px;
+    background: var(--danger);
+    border-radius: 20px;
+    transition: 0.4s ease;
+}
+.foodColor-panel .food-content .foodcolor-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.foodColor-panel .food-content .foodcolor-options .foodoption{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease;
+}
+.foodoption:hover{
+    filter: brightness(0.8);
+}
+.foodoption:active{
+    transform: scale(0.95);
+}
+.foodcolor-options .foodoption.selected::before{
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background-color: black;
+    border-radius: 50%;
+}
+.foodcolor-options .active{
+    background-color: var(--active);
+} 
+.foodcolor-options .inactive{
+    background-color: var(--danger);
+} 
+.foodcolor-options .alert{
+background-color: var(--alert);
+} 
+.foodcolor-options .intense{
+background-color: var(--intense);
+} 
+.foodcolor-options .primary{
+background-color: var(--primary);
+} 
+.options-panels .foodColor-panel .food-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 10px;
+}
+.foodColor-panel .food-btns .btn{
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    padding: 8px 90px;
+    border-radius: 40px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.foodColor-panel .food-btns .btn:active{
+    transform: scale(0.95);
+    filter: brightness(0.8);
+}
+.food-btns .default{
+    background-color: var(--primary);
+    color: var(--white);
+}
+.food-btns .save{
+    background-color: var(--de-black);
+    color: var(--white);
+}
+.foodColor-panel .food-btns .default:hover{
+    filter: brightness(0.8);
+}
+.foodColor-panel .food-btns .save:hover{
+    filter: brightness(0.8);
+}
+.options-panels .control-panel{
+    z-index: 0;
+    position: absolute;
+    width: 310px;
+    height: 380px;
+    background: var(--black);
+    border-radius: 15px;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: 0.4s ease;
+}
+.options-panels .control-panel .control-content{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.control-panel .control-content .control-btns{
+    background: var(--de-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 40px;
+}
+.control-panel .control-content .control-btns .btn{
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 8px 13px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.control-btns .btn:active{
+    transform: scale(0.95);
+    filter: brightness(0.8);
+}
+.control-btns .wasd{
+    background-color: var(--mid-black);
+    color: var(--grey);
+}
+.control-btns .btn.selected{
+    background-color: var(--primary);
+    color: var(--white);
+}
+.control-btns .arrowkeys{
+    background-color: var(--mid-black);
+    color: var(--grey);
+}
+.control-content .controlkeys-content{
+    width: 100%;
+    height: 180px;
+    background: var(--de-black);
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.control-content .controlkeys-content img{
+    height: 110px;
+}
